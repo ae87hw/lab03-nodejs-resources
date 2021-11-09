@@ -1,9 +1,12 @@
 {
-    "name": "lab02_cart", 
+    "name": "lab02_cart",
     "version": "1.0.0",
-    "description": "", 
-    "main": "app.js", 
+    "description": "",
+    "main": "app.js",
     "keywords": [],
     "author": "",
-    "license": "ISC" 
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
