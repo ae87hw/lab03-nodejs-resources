@@ -3,6 +3,11 @@ const express = require('express');
 //creating app
 const app = express();
 
+// using JSON and URL Encoded middleware app.use
+(express.json()); 
+app.use(express.urlencoded({ extended: true 
+}));
+
 //send the index.html when receiving HTTP GET /
 // app.use(express.static('public'));
 // app.get('/', (req, res) => { res.sendFile('index.html', { root: __dirname });
@@ -26,7 +31,7 @@ app.get('/', (req, res) => {
 //route for contacts
 app.get('/contacts', (req, res) => {
     res.render('contacts'); 
-});
+});``
 
 //route for username in login.ejs file
 app.get('/register', (req, res) => {
