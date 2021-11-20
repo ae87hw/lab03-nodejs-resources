@@ -28,12 +28,12 @@ app.get('/', (req, res) => {
     res.render('index'); //no need for ejs extension 
 });
 
-//route for contacts
+//route for contacts in contacts.ejs file
 app.get('/contacts', (req, res) => {
     res.render('contacts'); 
 });``
 
-//route for username in login.ejs file
+//route for register in register.ejs file
 app.get('/register', (req, res) => {
     res.render('register');
 });
