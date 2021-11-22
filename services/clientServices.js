@@ -1,5 +1,4 @@
-//const Client = require('../models/entities');
-// const Client = require('../models/entities/client'); 
+const { Client } = require('../models/entities');
 const clientDAO = require('../db/clientDAO');
 const bcrypt = require("bcryptjs");
 
@@ -27,7 +26,7 @@ const loginService = (typedUsername, typedPassword, callback) => {
                     callback(null, true, null);
                 } else {
                     console.log("Password matches!");
-                    clientDAO.findByNumclient(num, function(err3, rows) {
+                    clientDAO.findByNumClient(num, function(err3, rows) {
                         if (err3) {
                             throw err3;
                         }

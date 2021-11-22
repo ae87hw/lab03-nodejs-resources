@@ -1,10 +1,13 @@
-const express = require('express'); 
+const express = require('express');
+const session = require('express-session');
 
 //creating app
 const app = express();
 
+app.use(session({secret: 'some secret code'}));
+
 // using JSON and URL Encoded middleware app.use
-(express.json()); 
+(express.json());
 app.use(express.urlencoded({ extended: true 
 }));
 

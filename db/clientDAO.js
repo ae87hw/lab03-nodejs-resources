@@ -70,11 +70,25 @@ function createClient(client, callback) {
         }
     });
 }
+
+
+function findByNumClient(num_client, callback) {
+    const selectNumClient = (`SELECT * from account where num_client like '${num_client}';`);
+    database.getResult(selectNumClient, function(err, rows) {
+        if (!err) {
+            callback(null, rows);
+        } else {
+            console.log(err);
+        }
+    });
+}
+
+
 module.exports = {
     find,
     findByUsername,
     //findBySociety,
-    //findByNumclient,
+    findByNumClient,
     createClient
     //deleteClient,
     //createInitialAccounts

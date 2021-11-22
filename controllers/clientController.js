@@ -1,3 +1,6 @@
+const { client } = require('../models/entities');
+const clientDAO = require('../db/clientDAO');
+
 const loginControl = (request, response) => {
     const clientServices = require('../services/clientServices');
 
@@ -69,7 +72,7 @@ const getClients = (request, response) => {
     });
 };
 
-const getClientByNumclient = (request, response) => {
+const getClientByNumClient = (request, response) => {
     const clientServices = require('../services/clientServices');
     let num_client = request.params.num_client;
     clientServices.searchNumclientService(num_client, function(err, rows) {
@@ -82,5 +85,5 @@ module.exports = {
     loginControl,
     registerControl,
     getClients,
-    getClientByNumclient
+    getClientByNumClient
 };
