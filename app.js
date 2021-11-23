@@ -16,13 +16,6 @@ app.use(express.urlencoded({ extended: true
 // app.get('/', (req, res) => { res.sendFile('index.html', { root: __dirname });
 // });
 
-//make the app listen on port
-const port = process.argv[2] || process.env.PORT || 3000; 
-
-const server = app.listen(port, () => { 
-    console.log(`Cart app listening at http://localhost:${port}`); 
-});
-
 //handling static HTML and EJS templates
 app.use(express.static('public')); 
 //app.use('/public', express.static('public'));
@@ -49,3 +42,10 @@ app.get('/login', (req, res) => {
 //pass requests to the router middleware
 const router = require('./routes/api');
 app.use(router);
+
+//make the app listen on port
+const port = process.argv[2] || process.env.PORT || 3000; 
+
+const server = app.listen(port, () => { 
+    console.log(`Cart app listening at http://localhost:${port}`); 
+});

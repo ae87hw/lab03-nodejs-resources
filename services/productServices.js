@@ -11,6 +11,7 @@ const searchService = function(callback) {
         }
     });
 };
+
 const searchIDService = function(reference, callback) {
     productDAO.findByID(reference, function(err, rows) {
         if (err) {
@@ -26,6 +27,7 @@ const searchIDService = function(reference, callback) {
         }
     });
 };
+
 const searchCategoryService = function(category, callback) {
     productDAO.findByCategory(category, function(err, rows) {
         if (err) {
