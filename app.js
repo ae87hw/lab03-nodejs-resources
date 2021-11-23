@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 //route for contacts in contacts.ejs file
 app.get('/contacts', (req, res) => {
     res.render('contacts'); 
-});``
+});
 
 //route for register in register.ejs file
 app.get('/register', (req, res) => {
