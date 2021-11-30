@@ -1,18 +1,23 @@
 <%- include('header'); -%>
 
-    <form method="POST" action="/api/login">
+    <div class='content'>
 
-        <br>
-        <label for="username"> Username: </label>
-        <br>
-        <input type="text" name="username" placeholder="Enter your username" required autofocus><br>
-        <br>
-        <label for="password"> Password: </label>
-        <br>
-        <input type="password" name="passwsord" placeholder="Enter your password" required><br>
-        <br>
-        <button> submit </button>
+        <form method="POST" action="/api/login">
 
-    </form>
+            <br>
+            <label for="username"> Username: </label>
+            <br>
+            <input type="text" name="username" placeholder="Enter your username" required autofocus><br>
+            <br>
+            <label for="password"> Password: </label>
+            <br>
+            <input type="password" name="password" placeholder="Enter your password" required><br>
+            <br>
+            <br>
+            <button> submit </button>
+
+        </form>
+
+    </div>
 
 <%- include('footer'); -%>

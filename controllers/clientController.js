@@ -1,5 +1,4 @@
 const { Client } = require('../models/entities');
-// const clientDAO = require('../db/clientDAO');
 
 const loginControl = (request, response) => {
     const clientServices = require('../services/clientServices');
@@ -7,6 +6,7 @@ const loginControl = (request, response) => {
     console.log(request.body.password);
     let username = request.body.username;
     let password = request.body.password;
+    
     if (!username || !password) {
         response.render('failedLogin', { username: `Login failed, please try again` });
     } else {
@@ -44,6 +44,7 @@ const registerControl = (request, response) => {
     let fax = request.body.fax;
     let max_outstanding = request.body.max_outstanding;
     let client = new Client(username, password, 0, society, contact, address, zipcode, city, phone, fax, max_outstanding);
+    
     clientServices.registerService(client, function(err, exists, insertedID) {
         console.log("User from register service :" + insertedID);
         if (exists) {

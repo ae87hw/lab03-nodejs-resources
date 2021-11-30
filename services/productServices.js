@@ -1,4 +1,5 @@
 const productDAO = require('../db/productDAO');
+
 const searchService = function(callback) {
     productDAO.findAll(function(err, rows) {
         if (err) {
